@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: white;
+    background-color: #020338;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
+    color: inherit;
+}
+
+.mat-table {
+    color: #e0e0e0 !important;
+    /* Cambia el color del texto en la tabla */
+}
+
+.mat-header-cell,
+.mat-cell {
+    color: #e0e0e0 !important;
+    /* Asegura que las celdas y encabezados hereden el color */
+}
+
+.mat-header-row,
+.mat-row {
+    background-color: transparent !important;
+    /* Si hay fondo oscuro que afecta el texto, puedes ajustarlo aquí */
+}
+
+.mat-mdc-row {
+    color: white !important;
+}
+
+.mat-mdc-header-row{
+    color: white !important;
+}
+
+
+.custom-button {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #004080;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.new-row {
+    background-color: #eef2f5
+}
+
+.mat-mdc-cell {
+    // border: 1px solid black !important;
+    // border-top: 1px solid black !important;
+    border: none !important;
+}
+
+// .mat-mdc-row:nth-child(odd){
+//     background-color: #202955;
+// }
+
+.mat-mdc-row:nth-child(even){
+    background-color: #202955;
+}
+
+.mat-mdc-header-row{
+    background: #070120 !important;
+}

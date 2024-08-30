@@ -1,0 +1,72 @@
+<div class="empleado-form-container">
+    <h2>Crear Nuevo Empleado</h2>
+    <form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">
+        <!-- Empresa -->
+        <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <select id="empresa" formControlName="empresa">
+                <option *ngFor="let empresa of empresas" [value]="empresa.id">{{ empresa.nombre }}</option>
+            </select>
+            <div class="error" *ngIf="empleadoForm.get('empresa')?.invalid && empleadoForm.get('empresa')?.touched">
+                <!-- <small *ngIf="empleadoForm.get('empresa')?.errors?.['required']">Debe seleccionar una empresa.</small> -->
+            </div>
+        </div>
+
+        <!-- Nombre Completo -->
+        <div class="form-group">
+            <label for="nombre_completo">Nombre Completo *</label>
+            <input id="nombre_completo" type="text" formControlName="nombre_completo" />
+            <div class="error"
+                *ngIf="empleadoForm.get('nombre_completo')?.invalid && empleadoForm.get('nombre_completo')?.touched">
+                <small *ngIf="empleadoForm.get('nombre_completo')?.errors?.['required']">El nombre completo es
+                    obligatorio.</small>
+                <small *ngIf="empleadoForm.get('nombre_completo')?.errors?.['maxlength']">Máximo 255 caracteres.</small>
+            </div>
+        </div>
+
+        <!-- RUT -->
+        <div class="form-group">
+            <label for="rut">RUT *</label>
+            <input id="rut" type="text" formControlName="rut" />
+            <div class="error" *ngIf="empleadoForm.get('rut')?.invalid && empleadoForm.get('rut')?.touched">
+                <small *ngIf="empleadoForm.get('rut')?.errors?.['required']">El RUT es obligatorio.</small>
+                <small *ngIf="empleadoForm.get('rut')?.errors?.['maxlength']">Máximo 12 caracteres.</small>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input id="email" type="email" formControlName="email" />
+            <div class="error" *ngIf="empleadoForm.get('email')?.invalid && empleadoForm.get('email')?.touched">
+                <small *ngIf="empleadoForm.get('email')?.errors?.['required']">El email es obligatorio.</small>
+                <!-- <small *ngIf="empleadoForm.get('email')?.errors?.['email']">Ingrese un email válido.</small> -->
+                <small *ngIf="empleadoForm.get('email')?.errors?.['maxlength']">Máximo 255 caracteres.</small>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="form-actions">
+            <button type="submit" class="custom-button" [disabled]="empleadoForm.invalid">
+                <mat-icon>save</mat-icon>
+                Crear
+            </button>
+            <button type="button" class="custom-button btn-cancel" (click)="onCancel()">
+                <mat-icon>cancel</mat-icon>
+                Cancelar
+            </button>
+        </div>
+
+            <!-- Botones de Acción -->
+    <!-- <div class="form-actions">
+        <button type="submit" class="custom-button" [disabled]="empresaForm.invalid">
+          <mat-icon>save</mat-icon>
+          Crear
+        </button>
+        <button type="button" class="custom-button btn-cancel" (click)="onCancel()">
+          <mat-icon>cancel</mat-icon>
+          Cancelar
+        </button>
+      </div> -->
+    </form>
+</div>

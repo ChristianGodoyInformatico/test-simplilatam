@@ -25,7 +25,7 @@ dist/
 
 # Node
 /node_modules
-/frontend-app
+# /frontend-app
 npm-debug.log
 yarn-error.log
 
