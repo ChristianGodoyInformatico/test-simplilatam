@@ -17,3 +17,5 @@ El proyecto está desplegado en la plataforma AWS, utilizando los siguientes ser
 Agradecimientos
 
 Quiero agradecer la oportunidad de enfrentar este reto, que me permitió aprender y aplicar nuevas habilidades. En particular, fue una experiencia gratificante trabajar con Django, un framework con el que no había interactuado previamente. Este desafío fue una excelente oportunidad para expandir mis conocimientos y habilidades, y realmente disfruté el proceso de desarrollo.
+
+rpoyecto deplegado en http://18.189.13.229/
